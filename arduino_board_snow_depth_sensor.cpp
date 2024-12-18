@@ -98,7 +98,7 @@ void loop() {
   Serial.println(" °C");
 
   Serial.print("Temperatura Modificada = ");
-  Serial.print(temperature-potValue2);
+  Serial.print(bmp.readTemperature()-potValue2);
   Serial.println(" °C");
   
   float pressure = bmp.readPressure() / 100.0F; // hPa
